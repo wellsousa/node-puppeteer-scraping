@@ -1,3 +1,11 @@
+/*
+    //Exemplo de utilização
+
+    const pdf = generate_pdf('https://github.com/GoogleChrome/puppeteer', 'puppeteer-doc');  
+    generate_pdf('https://github.com/GoogleChrome/puppeteer/blob/v1.20.0/docs/api.md','puppeteer-api-doc');
+
+*/
+
 const puppeteer = require('puppeteer');
 
 const base_dir = './files/pdf/';
