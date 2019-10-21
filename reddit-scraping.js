@@ -2,6 +2,7 @@ const puppeteer = require('puppeteer');
 
 const BASEREDDIT_URL = 'https://old.reddit.com/r';
 let REDDIT_URL = (sub_url) => BASEREDDIT_URL + `/${sub_url}/`;
+
 const self = {
     browser: null,
     pages: null,
@@ -20,7 +21,7 @@ const self = {
         await self.page.goto(REDDIT_URL(custom_url), {waitUntil: 'networkidle0'});
     },
 
-    getResults: async(num) => {
+    getResults: async(results_number) => {
 
         let elements = await self.page.$$('#siteTable > div[class*="thing"]');
 
